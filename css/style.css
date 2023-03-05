@@ -1,3 +1,9 @@
 .hidden {
   display: none;
 }
+
+input::placeholder {color:#eee;}
+input::-webkit-input-placeholder {color:#eee;}
+input:-ms-input-placeholder {color:#eee;}
+
+input:focus { outline: none; }

@@ -6,4 +6,6 @@ const bgImage = document.createElement("img");
 
 bgImage.src = `img/${chosenImage}`;
 
-document.body.appendChild(bgImage);
+document.body.style.background = `url(${bgImage.src}) no-repeat center/cover`;
+document.body.style.height = '100vh';
+document.body.style.overflow = 'hidden';

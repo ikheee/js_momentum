@@ -7,28 +7,35 @@
     <title>Momentum App</title>
   </head>
   <body>
-    <h2 id="clock">00:00:00</h2>
-    <form class="hidden" id="login-form">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <input type="submit" value="Log In" />
-    </form>
-    <h1 class="hidden" id="greeting"></h1>
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
+    <h2 id="clock" style="display: flex; justify-content: center; color: #ffffff; font-size: 95px; padding-top: 20px;">00:00:00</h2>
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <form class="hidden" id="login-form">
+        <input
+          required
+          maxlength="15"
+          type="text"
+          placeholder="What is your name?"
+          style="width: 250px;padding:5px; border: 0; border-bottom: solid 2px #ffffff; border-radius: 5px; background: transparent; color: #ffffff; font-size: 15px;"
+        />
+        <!-- <input type="submit" value="Log In" /> -->
+      </form>
+      <h1 class="hidden" id="greeting" style="color: #ffffff; background-color: black; background-color: rgba( 0, 0, 0, 0.1 ); padding: 5px 20px; border-radius: 10px;"></h1>
+      <form id="todo-form">
+        <input type="text" placeholder="Write a To Do and Press Enter" required style="width: 250px; padding:5px; border: 0; border-bottom: solid 2px #ffffff; border-radius: 5px; background: transparent; color: #ffffff; font-size: 15px;" />
+      </form>
+      <div id="todo-container" class="hidden">
+        <ul id="todo-list" style="color: #ffffff; background-color: black; background-color: rgba( 0, 0, 0, 0.6 ); padding: 10px 30px; border-radius: 10px; line-height: 30px;"></ul>
+      </div>
+    </div>
+    <div id="weather" style="position: absolute; top: 45px; right : 20px; color: #ffffff; background-color: black; background-color: rgba( 255, 255, 255, 0.3 ); padding: 5px 20px; border-radius: 10px;">
       <span></span>
       <span></span>
     </div>
-    <div id="weather">
-      <span></span>
-      <span></span>
+    <div style="position:absolute; bottom:10px; width: 100vw; display: flex; justify-content: center;">
+      <div id="quote" style="color: #ffffff; text-align:center; background-color: black; background-color: rgba( 255, 255, 255, 0.3 ); padding: 5px 20px; border-radius: 10px;">
+        <span></span>
+        <span style="color: yellow;"></span>
+      </div>
     </div>
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
